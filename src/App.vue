@@ -1,4 +1,6 @@
 <script setup>
+import Sidebar from './components/Sidebar.vue'
+import Card from './components/Card.vue'
 </script>
 
 <template>
@@ -6,37 +8,15 @@
   <div class="dashboard">
     <header class="header">Header</header>
 
-    <aside class="sidebar">
-  <nav aria-label="Main Navigation">
-    <ul>
-      <li><button aria-label="Go to Dashboard">Dashboard</button></li>
-      <li><button aria-label="View Users">Users</button></li>
-      <li><button aria-label="View Reports">Reports</button></li>
-      <li><button aria-label="Open Settings">Settings</button></li>
-    </ul>
-  </nav>
-</aside>
+    <Sidebar />
 
 <main class="main" role="main">
   <div class="cards">
-
-    <div class="card">
-      <button aria-label="View Users Statistics">Users</button>
-    </div>
-
-    <div class="card">
-      <button aria-label="View Sales Data">Sales</button>
-    </div>
-
-    <div class="card">
-      <button aria-label="View Revenue Data">Revenue</button>
-    </div>
-
-    <div class="card">
-      <button aria-label="View Performance Metrics">Performance</button>
-    </div>
-
-  </div>
+  <Card title="Users" label="View Users Statistics" />
+  <Card title="Sales" label="View Sales Data" />
+  <Card title="Revenue" label="View Revenue Data" />
+  <Card title="Performance" label="View Performance Metrics" />
+</div>
 </main>
     <footer class="footer">Footer</footer>
   </div>
